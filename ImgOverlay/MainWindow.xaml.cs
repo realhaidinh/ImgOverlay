@@ -26,7 +26,7 @@ namespace ImgOverlay
         public MainWindow()
         {
             Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
-
+            
             InitializeComponent();
         }
 

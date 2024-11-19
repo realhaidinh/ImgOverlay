@@ -9,7 +9,7 @@
         Topmost="True"
         WindowStyle="None"
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip"
+        ResizeMode="NoResize"
         IsHitTestVisible="False"
         Loaded="Window_Loaded"
         SourceInitialized="Window_SourceInitialized"
@@ -18,7 +18,7 @@
         <SolidColorBrush Opacity="0" Color="White" />
     </Window.Background>
     <Grid >
-        <Image x:Name="DisplayImage"></Image>
-        <ResizeGrip />
+        <Image x:Name="DisplayImage"/>
+        <ResizeGrip x:Name="ResizeGrip" Visibility="Hidden"/>
     </Grid>
 </Window>

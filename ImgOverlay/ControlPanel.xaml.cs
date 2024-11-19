@@ -22,7 +22,17 @@ namespace ImgOverlay
 
             var opaque = (sender as ToggleButton).IsChecked.Value;
             Owner.IsHitTestVisible = opaque;
-
+            if(Owner.ResizeMode == System.Windows.ResizeMode.NoResize)
+            {
+                Owner.ResizeMode = System.Windows.ResizeMode.CanResizeWithGrip;
+                (Owner as MainWindow).ResizeGrip.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                Owner.ResizeMode = System.Windows.ResizeMode.NoResize;
+                (Owner as MainWindow).ResizeGrip.Visibility = System.Windows.Visibility.Hidden;
+            }
+            
             var hwnd = new WindowInteropHelper(Owner).Handle;
             if (opaque)
             {
